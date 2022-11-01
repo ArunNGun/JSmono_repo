@@ -1,5 +1,5 @@
 
-import { Container } from './styles.js'
+import { Container } from '../styles/styles.js'
 import Header from '../src/components/header'
 import Main from '../src/components/main'
 import Footer from '../src/components/footer'
