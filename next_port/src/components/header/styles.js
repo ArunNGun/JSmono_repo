@@ -1,39 +1,55 @@
 import styled from 'styled-components'
+import { space, layout, color } from 'styled-system'
+import { motion } from 'framer-motion'
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled(motion.div)`
 display:flex;
 height:12%;
+${space}
+${layout}
+${color}
 `
-export const HeaderLeft = styled.div`
+export const HeaderLeft = styled(motion.div)`
 display:flex;
 width:70%;
 height:100%;
 background: linear-gradient(0deg, #050A18, #050A18);
 border-right: 0.5px solid rgba(30, 36, 53, 1);
-
+${space}
+${layout}
+${color}
 `
-export const HeaderRight = styled.div`
+export const HeaderRight = styled(motion.div)`
 width:30%;
 background: linear-gradient(0deg, #050A18, #050A18);
 display:flex;
+${space}
+${layout}
+${color}
 `
-export const LogoBlock = styled.div`
+export const LogoBlock = styled(motion.div)`
 background: linear-gradient(0deg, #050A18, #050A18);
 border-right: 0.5px solid rgba(30, 36, 53, 1);
 width: 52%;
 display:flex;
 align-items:center;
 padding-left:45px;
+${space}
+${layout}
+${color}
 `
-export const NavLinksBlock = styled.div`
+export const NavLinksBlock = styled(motion.div)`
 background: linear-gradient(0deg, #050A18, #050A18);
 width:48%;
 display: flex;
 align-items:center;
 justify-content:center;
 gap: 2.5rem;
+${space}
+${layout}
+${color}
 `
-export const SocialBlock = styled.div`
+export const SocialBlock = styled(motion.div)`
 display: flex;
 align-items:center;
 justify-content: center;
@@ -45,7 +61,7 @@ background: linear-gradient(0deg, #050A18, #050A18);
 border-right: 0.5px solid rgba(30, 36, 53, 1);
 width:50%;
 `
-export const ContactBlock = styled.div`
+export const ContactBlock = styled(motion.div)`
 background: linear-gradient(0deg, #050A18, #050A18);
 width:50%;
 display: flex;
