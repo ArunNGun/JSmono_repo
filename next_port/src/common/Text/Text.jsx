@@ -1,10 +1,17 @@
 import React from 'react'
-import { TextContainer } from './styles'
-const Text = ({ children }) => {
+import { TextContainer, HugeTextContainer } from './styles'
+const Text = ({ children, ...rest }) => {
     return (
-        <TextContainer>
+        <TextContainer {...rest}>
             {children}
         </TextContainer>
+    )
+}
+export const HugeText = ({ children, ...rest }) => {
+    return (
+        <HugeTextContainer {...rest}>
+            {children}
+        </HugeTextContainer>
     )
 }
 

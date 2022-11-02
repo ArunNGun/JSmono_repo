@@ -1,6 +1,6 @@
 import React from 'react'
 import { ParaContainer } from './styles'
-const Text = ({ children, ...rest }) => {
+const Paragraph = ({ children, ...rest }) => {
     return (
         <ParaContainer {...rest}>
             {children}
@@ -8,4 +8,4 @@ const Text = ({ children, ...rest }) => {
     )
 }
 
-export default Text;
+export default Paragraph;

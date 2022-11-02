@@ -5,12 +5,13 @@ import Git from '../svgComponent/Git'
 import Insta from '../svgComponent/Insta'
 import Linkdin from '../svgComponent/Linkdin'
 import { ContactBlock, LogoBlock, HeaderContainer, NavLinksBlock, SocialBlock, HeaderLeft, HeaderRight } from './styles'
+
 const Header = () => {
     return (
         <HeaderContainer>
             <HeaderLeft>
                 <LogoBlock>
-                    <LOGO />
+                    <LOGO fillOne="#F2F2F2" fillTwo='#F2F2F2' />
                 </LogoBlock>
                 <NavLinksBlock>
                     <Text>ABOUT</Text>
