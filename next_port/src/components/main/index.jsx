@@ -5,14 +5,13 @@ import Box from "../../common/Box/Box";
 import { MainContainer, MainLeft, MainRight } from "./styles";
 import { rotateScrollMotion, scrollMotion } from "../motion";
 
-const Main = () => {
-    const rotateAndScrollMotion = () => {
+const Main = ({ onMouseEnter, onMouseLeave }) => {
 
-    }
     return (
         <MainContainer>
-            <MainLeft></MainLeft>
-            <MainRight initial="rest" whileHover="hover" animate="rest">
+            <MainLeft>
+            </MainLeft>
+            <MainRight initial="rest" whileHover="hover" animate="rest" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                 <Box p="2rem">
                     <Box>
                         <Box mb="2rem">
