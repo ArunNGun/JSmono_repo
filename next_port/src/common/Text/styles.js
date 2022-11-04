@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import { space, layout, color } from 'styled-system'
 import { motion } from 'framer-motion'
 
-export const HugeTextContainer = styled.label`
+export const HugeTextContainer = styled(motion.div)`
 font-family: 'Alfa Slab One', cursive;
 line-height:${({ lineHeight = '45px' }) => lineHeight};
 font-size:${({ fontSize = '52px' }) => fontSize};
 // color: rgba(227, 236, 255, 0.7);
 color:rgb(242, 242, 242)
 `
-export const TextContainer = styled.label`
+export const TextContainer = styled(motion.div)`
 font-size:${({ fontSize = '24px' }) => fontSize};
 font-family: 'Space Grotesk';
 font-style: normal;

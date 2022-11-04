@@ -6,10 +6,11 @@ import Arrow from "../svgComponent/Arrow";
 import { FooterContent, FooterLeft, FooterRight } from "./styles";
 import { scrollMotion, rotateMotion } from "../motion";
 
-const Footer = () => {
+const Footer = ({ aboutEnter, aboutLeave, workEnter, WorkLeave }) => {
     return (
         <FooterContent>
-            <FooterLeft initial="rest" whileHover="hover" animate="rest">
+            <FooterLeft onMouseEnter={aboutEnter}
+                onMouseLeave={aboutLeave} initial="rest" whileHover="hover" animate="rest">
                 <Box
                     width="65%"
                     height="100%"
@@ -54,7 +55,8 @@ const Footer = () => {
                     </Box>
                 </Box>
             </FooterLeft>
-            <FooterRight initial="rest" whileHover="hover" animate="rest">
+            <FooterRight onMouseEnter={workEnter}
+                onMouseLeave={WorkLeave} initial="rest" whileHover="hover" animate="rest">
                 <Box
                     width="85%"
                     height="100%"
