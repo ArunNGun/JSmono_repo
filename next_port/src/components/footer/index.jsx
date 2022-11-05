@@ -89,7 +89,7 @@ const Footer = ({ aboutEnter, aboutLeave, workEnter, WorkLeave, bgColor, bgVaria
                             <HugeText animate={textAnimate} variants={textVariants} transition={transition} fontSize="2rem" lineHeight="2rem">
                                 WORK
                             </HugeText>
-                            <Box width="15%" pl="0.75rem">
+                            <Box width="12%" pl="0.75rem">
                                 <Arrow animatePath={animatePath} />
                             </Box>
                         </Box>
