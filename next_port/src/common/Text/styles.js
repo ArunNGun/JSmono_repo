@@ -7,7 +7,7 @@ font-family: 'Alfa Slab One', cursive;
 line-height:${({ lineHeight = '45px' }) => lineHeight};
 font-size:${({ fontSize = '52px' }) => fontSize};
 // color: rgba(227, 236, 255, 0.7);
-color:rgb(242, 242, 242)
+// color:rgb(242, 242, 242)
 `
 export const TextContainer = styled(motion.div)`
 font-size:${({ fontSize = '24px' }) => fontSize};
@@ -22,7 +22,7 @@ padding: 1.1rem 2rem;
 -moz-osx-font-smoothing: grayscale;
 text-rendering: optimizeLegibility;
 // color: rgba(227, 236, 255, 0.7);
-color:rgb(242, 242, 242)
+// color:rgb(242, 242, 242)
 ${space}
 ${layout}
 ${color}

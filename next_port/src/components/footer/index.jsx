@@ -6,11 +6,12 @@ import Arrow from "../svgComponent/Arrow";
 import { FooterContent, FooterLeft, FooterRight } from "./styles";
 import { scrollMotion, rotateMotion } from "../motion";
 
-const Footer = ({ aboutEnter, aboutLeave, workEnter, WorkLeave }) => {
+const Footer = ({ aboutEnter, aboutLeave, workEnter, WorkLeave, bgColor, bgVariant, animate,
+    transition, textVariants, textAnimate, pathVariants, animatePath }) => {
     return (
         <FooterContent>
-            <FooterLeft onMouseEnter={aboutEnter}
-                onMouseLeave={aboutLeave} initial="rest" whileHover="hover" animate="rest">
+            <FooterLeft variants={bgVariant} bgColor={bgColor} id="footerleft" onMouseEnter={aboutEnter}
+                onMouseLeave={aboutLeave} initial="rest" whileHover="hover" animate={animate} transition={transition}>
                 <Box
                     width="65%"
                     height="100%"
@@ -28,13 +29,13 @@ const Footer = ({ aboutEnter, aboutLeave, workEnter, WorkLeave }) => {
                         overflowY="hidden"
                     >
                         <Box variants={scrollMotion(-89)}>
-                            <HugeText>
+                            <HugeText animate={textAnimate} variants={textVariants} transition={transition}>
                                 DIGITAL <br />
                                 CRAFTSMAN
                             </HugeText>
                         </Box>
                         <Box variants={scrollMotion(-89)}>
-                            <HugeText>
+                            <HugeText animate={textAnimate} variants={textVariants} transition={transition}>
                                 CREATIVE <br />
                                 ENGINEER
                             </HugeText>
@@ -50,13 +51,13 @@ const Footer = ({ aboutEnter, aboutLeave, workEnter, WorkLeave }) => {
                 >
                     <Box pr="30%">
                         <Box width="100%" maxWidth="200px" variants={rotateMotion(90)}>
-                            <Cross fill="#f2f2f2" />
+                            <Cross animatePath={animatePath} variants={pathVariants} transition={transition} fill="#f2f2f2" />
                         </Box>
                     </Box>
                 </Box>
             </FooterLeft>
-            <FooterRight onMouseEnter={workEnter}
-                onMouseLeave={WorkLeave} initial="rest" whileHover="hover" animate="rest">
+            <FooterRight variants={bgVariant} bgColor={bgColor} onMouseEnter={workEnter}
+                onMouseLeave={WorkLeave} initial="rest" whileHover="hover" animate={animate} transition={transition}>
                 <Box
                     width="85%"
                     height="100%"
@@ -72,11 +73,11 @@ const Footer = ({ aboutEnter, aboutLeave, workEnter, WorkLeave }) => {
                             justifyContent="center"
                             variants={scrollMotion()}
                         >
-                            <HugeText fontSize="2rem" lineHeight="2rem">
+                            <HugeText animate={textAnimate} variants={textVariants} transition={transition} fontSize="2rem" lineHeight="2rem">
                                 WORK
                             </HugeText>
                             <Box width="15%" pl="0.75rem">
-                                <Arrow />
+                                <Arrow animatePath={animatePath} />
                             </Box>
                         </Box>
                         <Box
@@ -85,11 +86,11 @@ const Footer = ({ aboutEnter, aboutLeave, workEnter, WorkLeave }) => {
                             justifyContent="center"
                             variants={scrollMotion()}
                         >
-                            <HugeText fontSize="2rem" lineHeight="2rem">
+                            <HugeText animate={textAnimate} variants={textVariants} transition={transition} fontSize="2rem" lineHeight="2rem">
                                 WORK
                             </HugeText>
                             <Box width="15%" pl="0.75rem">
-                                <Arrow />
+                                <Arrow animatePath={animatePath} />
                             </Box>
                         </Box>
                     </Box>

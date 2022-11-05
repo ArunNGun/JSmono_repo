@@ -9,7 +9,10 @@ const Cursor = ({ variants, animate,
     return (<CursorContainer variants={variants} animate={animate}
         transition={transition}
     >
-        {cursorText === 'eye' ? <Eye /> : cursorText}
+        {cursorText === 'eye' ? <Box height="48px" width="48px">
+            <Eye />
+        </Box>
+            : cursorText}
     </CursorContainer>);
 }
 
