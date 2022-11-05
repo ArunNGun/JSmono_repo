@@ -23,9 +23,15 @@ const Header = ({ onMouseEnter, onMouseLeave, bgColor, animate, transition, bgVa
             </HeaderLeft>
             <HeaderRight variants={bgVariant} animate={animate} transition={transition}>
                 <SocialBlock bgColor={bgColor} variants={bgVariant} animate={animate} transition={transition}>
-                    <Git animatePath={animatePath} />
-                    <Insta animatePath={animatePath} />
-                    <Linkdin animatePath={animatePath} />
+                    <Box onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                        <Git animatePath={animatePath} />
+                    </Box>
+                    <Box onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                        <Insta animatePath={animatePath} />
+                    </Box>
+                    <Box onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                        <Linkdin animatePath={animatePath} />
+                    </Box>
                 </SocialBlock>
                 <ContactBlock bgColor={bgColor} variants={bgVariant} animate={animate} transition={transition}>
                     <Text onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} animate={textAnimate} variants={textVariants} transition={transition}>
