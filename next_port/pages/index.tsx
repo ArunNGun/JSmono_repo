@@ -115,16 +115,20 @@ export default function Home() {
     },
     header: {
       opacity: 1,
-      backgroundColor: "rgba(255, 255, 255, 0.6)",
-      color: "#000",
-      height: 80,
-      width: 80,
+      backgroundColor: "rgba(255, 255, 255, 1)",
+      // color: "#f2f2f2",
+      // filter: "invert(1)",
+      // mixBlendMode: "difference",
+      // backgroundColor: "yellow",
+      mixBlendMode: "difference",
+      height: 60,
+      width: 60,
       fontSize: "18px",
       display:"flex",
       alignItems:"center",
       justifyContent:"center",
-      x: mouseXPosition -40 ,
-      y: mouseYPosition -40
+      x: mouseXPosition -30 ,
+      y: mouseYPosition -30
     },
     contact: {
       opacity: 1,
@@ -157,7 +161,8 @@ export default function Home() {
       color: "#050A18"
     },
     light:{
-      color: "#f2f2f2"
+      color: "#E3ECFF"
+      // color: "#f2f2f2"
     }
   }
   const pathVariants ={
@@ -174,6 +179,10 @@ export default function Home() {
     stiffness: 500,
     damping: 28
   };
+  const ease = {
+    ease:[0.6,0.01,-0.05,0.9],
+    duration: 0.3
+  };
 
 
   return (
@@ -185,7 +194,7 @@ export default function Home() {
       textVariants={textVariants}
       bgVariant={bgVariants} 
       animate={bgVariant}
-          transition={spring}
+          transition={ease}
       onMouseEnter={headerEnter}
             onMouseLeave={mouseLeave} 
             animatePath={pathVariant}
@@ -194,7 +203,7 @@ export default function Home() {
             onMouseLeave={mouseLeave}
             bgVariant={bgVariants} 
       animate={bgVariant}
-          transition={spring}
+          transition={ease}
           textAnimate={textVariant}
           textVariants={textVariants}
           animatePath={pathVariant}
@@ -204,7 +213,7 @@ export default function Home() {
    pathVariants ={pathVariants}
    animatePath={pathVariant}
       animate={bgVariant}
-          transition={spring}
+          transition={ease}
           textAnimate={textVariant}
           textVariants={textVariants}
       aboutEnter={aboutEnter}
