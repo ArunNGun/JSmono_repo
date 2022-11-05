@@ -13,7 +13,8 @@ export const HeaderLeft = styled(motion.div)`
 display:flex;
 width:70%;
 height:100%;
-background: linear-gradient(0deg, #050A18, #050A18);
+// background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
+
 border-right: 0.5px solid rgba(30, 36, 53, 1);
 ${space}
 ${layout}
@@ -21,14 +22,16 @@ ${color}
 `
 export const HeaderRight = styled(motion.div)`
 width:30%;
-background: linear-gradient(0deg, #050A18, #050A18);
+// background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
+
 display:flex;
 ${space}
 ${layout}
 ${color}
 `
 export const LogoBlock = styled(motion.div)`
-background: linear-gradient(0deg, #050A18, #050A18);
+// background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
+
 border-right: 0.5px solid rgba(30, 36, 53, 1);
 width: 52%;
 display:flex;
@@ -39,7 +42,8 @@ ${layout}
 ${color}
 `
 export const NavLinksBlock = styled(motion.div)`
-background: linear-gradient(0deg, #050A18, #050A18);
+// background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
+
 width:48%;
 display: flex;
 align-items:center;
@@ -57,12 +61,14 @@ gap: 1rem;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 text-rendering: optimizeLegibility;
-background: linear-gradient(0deg, #050A18, #050A18);
+// background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
+
 border-right: 0.5px solid rgba(30, 36, 53, 1);
 width:50%;
 `
 export const ContactBlock = styled(motion.div)`
-background: linear-gradient(0deg, #050A18, #050A18);
+// background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
+
 width:50%;
 display: flex;
 align-items:center;

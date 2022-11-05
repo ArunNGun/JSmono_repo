@@ -7,28 +7,28 @@ import Linkdin from '../svgComponent/Linkdin'
 import { ContactBlock, LogoBlock, HeaderContainer, NavLinksBlock, SocialBlock, HeaderLeft, HeaderRight } from './styles'
 import Box from '../../common/Box/Box'
 
-const Header = ({ onMouseEnter, onMouseLeave }) => {
+const Header = ({ onMouseEnter, onMouseLeave, bgColor, animate, transition, bgVariant, textVariants, textAnimate, animatePath }) => {
     return (
         <HeaderContainer>
-            <HeaderLeft>
-                <LogoBlock>
+            <HeaderLeft variants={bgVariant} animate={animate} transition={transition}>
+                <LogoBlock bgColor={bgColor}>
                     <Box p="0" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-                        <LOGO fillOne="#F2F2F2" fillTwo='#F2F2F2' />
+                        <LOGO animatePath={animatePath} fillOne="#F2F2F2" fillTwo='#F2F2F2' />
                     </Box>
                 </LogoBlock>
-                <NavLinksBlock>
-                    <Text onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>ABOUT</Text>
-                    <Text onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>WORK</Text>
+                <NavLinksBlock bgColor={bgColor}>
+                    <Text animate={textAnimate} variants={textVariants} transition={transition} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>ABOUT</Text>
+                    <Text animate={textAnimate} variants={textVariants} transition={transition} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>WORK</Text>
                 </NavLinksBlock>
             </HeaderLeft>
-            <HeaderRight>
-                <SocialBlock>
-                    <Git />
-                    <Insta />
-                    <Linkdin />
+            <HeaderRight variants={bgVariant} animate={animate} transition={transition}>
+                <SocialBlock bgColor={bgColor} variants={bgVariant} animate={animate} transition={transition}>
+                    <Git animatePath={animatePath} />
+                    <Insta animatePath={animatePath} />
+                    <Linkdin animatePath={animatePath} />
                 </SocialBlock>
-                <ContactBlock>
-                    <Text onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                <ContactBlock bgColor={bgColor} variants={bgVariant} animate={animate} transition={transition}>
+                    <Text onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} animate={textAnimate} variants={textVariants} transition={transition}>
                         GET IN TOUCH
                     </Text>
                 </ContactBlock>

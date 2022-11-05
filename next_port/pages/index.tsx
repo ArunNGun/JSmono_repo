@@ -12,6 +12,10 @@ export default function Home() {
 
   const [cursorText, setCursorText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("default");
+  const [bgVariant,setBgVariant] = useState("default")
+  const [pathVariant,setPathVariant] = useState("light")
+  const [textVariant,setTextVariant] = useState("light")
+
 
   const ref = useRef(null);
   const mouse = useMouse(ref, {
@@ -31,11 +35,19 @@ export default function Home() {
   }
   /////
   function aboutEnter(event) {
+    // onHoverFooter();
+    setTextVariant("dark");
+    setPathVariant("dark");
+    setBgVariant("secondary")
     setCursorText("About");
     setCursorVariant("about");
   }
 
   function mouseLeave(event) {
+    // onLeaveFooter();
+    setTextVariant("light");
+    setPathVariant("light");
+    setBgVariant("default")
     setCursorText("");
     setCursorVariant("default");
   }
@@ -74,11 +86,13 @@ export default function Home() {
     },
     about: {
       opacity: 1,
-      backgroundColor: "rgba(255, 255, 255, 0.6)",
-      color: "#000",
+      backgroundColor: "rgba(151, 126, 242, .15)", 
+      filter: "blur(1px)",
+      color: "White",
+      border: "1px solid rgba(151, 126, 242, 5)",
       height: 100,
       width: 100,
-      fontSize: "18px",
+      fontSize: "12px",
       display:"flex",
       alignItems:"center",
       justifyContent:"center",
@@ -87,10 +101,11 @@ export default function Home() {
     },
     work: {
       opacity: 1,
-      backgroundColor: "rgba(255, 255, 255, 0.6)",
+      backgroundColor: "rgba(151, 126, 242, 0.2)",
       color: "#000",
       height: 100,
       width: 100,
+      border: "1px solid rgba(151, 126, 242, 5)",
       fontSize: "18px",
       display:"flex",
       alignItems:"center",
@@ -113,10 +128,10 @@ export default function Home() {
     },
     contact: {
       opacity: 1,
-      backgroundColor: "rgba(255, 255, 255, .15)", 
+      backgroundColor: "rgba(151, 126, 242, .15)", 
       filter: "blur(1px)",
       color: "White",
-      border: "1px solid purple",
+      border: "1px solid rgba(151, 126, 242, 5)",
       height: 100,
       width: 100,
       fontSize: "12px",
@@ -127,6 +142,32 @@ export default function Home() {
       y: mouseYPosition -50
     }
   };
+
+
+  const bgVariants={
+    default:{
+      backgroundColor: "#050A18"
+    },
+    secondary:{
+      backgroundColor: "#bcc3d1"
+    }
+  }
+  const textVariants={
+    dark:{
+      color: "#050A18"
+    },
+    light:{
+      color: "#f2f2f2"
+    }
+  }
+  const pathVariants ={
+    light: {
+      fill: 'red',
+    },
+    dark: {
+      fill: 'green',
+    },
+  }
 
   const spring = {
     type: "spring",
@@ -139,11 +180,34 @@ export default function Home() {
     <Container ref={ref}>
       <Cursor variants={mouseVariants} animate={cursorVariant}
           transition={spring} cursorText={cursorText} />
-      <Header onMouseEnter={headerEnter}
-            onMouseLeave={mouseLeave} />
+      <Header 
+      textAnimate={textVariant}
+      textVariants={textVariants}
+      bgVariant={bgVariants} 
+      animate={bgVariant}
+          transition={spring}
+      onMouseEnter={headerEnter}
+            onMouseLeave={mouseLeave} 
+            animatePath={pathVariant}
+            />
       <Main onMouseEnter={contactEnter}
-            onMouseLeave={mouseLeave} />
-      <Footer aboutEnter={aboutEnter}
+            onMouseLeave={mouseLeave}
+            bgVariant={bgVariants} 
+      animate={bgVariant}
+          transition={spring}
+          textAnimate={textVariant}
+          textVariants={textVariants}
+          animatePath={pathVariant}
+            />
+      <Footer
+      bgVariant={bgVariants} 
+   pathVariants ={pathVariants}
+   animatePath={pathVariant}
+      animate={bgVariant}
+          transition={spring}
+          textAnimate={textVariant}
+          textVariants={textVariants}
+      aboutEnter={aboutEnter}
           aboutLeave={mouseLeave}
           workEnter={workEnter}
           workLeave={mouseLeave}
