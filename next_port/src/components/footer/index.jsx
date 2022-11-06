@@ -23,18 +23,18 @@ const Footer = ({ aboutEnter, aboutLeave, workEnter, WorkLeave, bgColor, bgVaria
                     <Box
                         display="flex"
                         flexDirection="column"
-                        gap="4px"
-                        height="89px"
+                        gap="6px"
+                        height="92px"
                         overflowx="hidden"
                         overflowY="hidden"
                     >
-                        <Box variants={scrollMotion(-89)}>
+                        <Box variants={scrollMotion(-90)}>
                             <HugeText animate={textAnimate} variants={textVariants} transition={transition}>
                                 DIGITAL <br />
                                 CRAFTSMAN
                             </HugeText>
                         </Box>
-                        <Box variants={scrollMotion(-89)}>
+                        <Box variants={scrollMotion(-90)}>
                             <HugeText animate={textAnimate} variants={textVariants} transition={transition}>
                                 CREATIVE <br />
                                 ENGINEER
