@@ -23,8 +23,9 @@ const Header = ({ onMouseEnter, onMouseLeave, bgColor, animate, transition, bgVa
                     <Link href="/about">
                         <Text animate={textAnimate} variants={textVariants} transition={transition} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>ABOUT</Text>
                     </Link>
-
-                    <Text animate={textAnimate} variants={textVariants} transition={transition} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>WORK</Text>
+                    <Link href="/work">
+                        <Text animate={textAnimate} variants={textVariants} transition={transition} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>WORK</Text>
+                    </Link>
                 </NavLinksBlock>
             </HeaderLeft>
             <HeaderRight variants={bgVariant} animate={animate} transition={transition}>
