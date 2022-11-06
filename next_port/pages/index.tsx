@@ -7,6 +7,8 @@ import Footer from '../src/components/footer'
 import { useState, useRef } from "react";
 import Eye from '../src/components/svgComponent/Eye'
 import useMouse from "@react-hook/mouse-position";
+import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
+import Loader from '../src/components/loader/Loader'
 
 export default function Home() {
 
@@ -15,7 +17,8 @@ export default function Home() {
   const [bgVariant,setBgVariant] = useState("default")
   const [pathVariant,setPathVariant] = useState("light")
   const [textVariant,setTextVariant] = useState("light")
-
+const [loading,setLoading] = useState(true)
+  //temp
 
   const ref = useRef(null);
   const mouse = useMouse(ref, {
@@ -77,6 +80,7 @@ export default function Home() {
       width: 10,
       fontSize: "16px",
       backgroundColor: "#f2f2f2",
+      mixBlendMode: "difference",
       x: mouseXPosition,
       y: mouseYPosition,
       transition: {
@@ -186,6 +190,14 @@ export default function Home() {
 
 
   return (
+    <AnimateSharedLayout type="crossfade">
+
+    <AnimatePresence>
+      {loading ? (
+      <motion.div key="loader">
+        <Loader setLoading={setLoading} />
+      </motion.div>
+        ):( 
     <Container ref={ref}>
       <Cursor variants={mouseVariants} animate={cursorVariant}
           transition={spring} cursorText={cursorText} />
@@ -202,7 +214,7 @@ export default function Home() {
       <Main onMouseEnter={contactEnter}
             onMouseLeave={mouseLeave}
             bgVariant={bgVariants} 
-      animate={bgVariant}
+            animate={bgVariant}
           transition={ease}
           textAnimate={textVariant}
           textVariants={textVariants}
@@ -216,11 +228,16 @@ export default function Home() {
           transition={ease}
           textAnimate={textVariant}
           textVariants={textVariants}
-      aboutEnter={aboutEnter}
+          aboutEnter={aboutEnter}
           aboutLeave={mouseLeave}
           workEnter={workEnter}
           workLeave={mouseLeave}
           />
     </Container>
+      )
+    }
+    </AnimatePresence>
+    </AnimateSharedLayout>
+
   )
 }
