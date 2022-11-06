@@ -193,11 +193,10 @@ const [loading,setLoading] = useState(true)
     <AnimateSharedLayout type="crossfade">
 
     <AnimatePresence>
-      {loading ? (
+      {loading ?
       <motion.div key="loader">
         <Loader setLoading={setLoading} />
-      </motion.div>
-        ):( 
+      </motion.div>:
     <Container ref={ref}>
       <Cursor variants={mouseVariants} animate={cursorVariant}
           transition={spring} cursorText={cursorText} />
@@ -233,9 +232,7 @@ const [loading,setLoading] = useState(true)
           workEnter={workEnter}
           workLeave={mouseLeave}
           />
-    </Container>
-      )
-    }
+    </Container>}
     </AnimatePresence>
     </AnimateSharedLayout>
 

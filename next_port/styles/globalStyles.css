@@ -47,3 +47,11 @@ q:before,q:after {
 }
 abbr,acronym { border:0;
 }
+.bablu{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    width:100vw;
+    z-index: 20;
+}
