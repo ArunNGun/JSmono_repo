@@ -1,10 +1,16 @@
+import { animate } from 'framer-motion'
 import React from 'react'
-import { BoxContainer } from './styles'
-const Box = ({ children, ...rest }) => {
+import { BoxContainer, BoxContainerAnimate } from './styles'
+const Box = ({ children, animate = false, ...rest }) => {
     return (
-        <BoxContainer {...rest}>
-            {children}
-        </BoxContainer>
+        animate ? (
+            <BoxContainerAnimate {...rest}>
+                {children}
+            </BoxContainerAnimate>)
+            :
+            (<BoxContainer {...rest}>
+                {children}
+            </BoxContainer>)
     )
 }
 

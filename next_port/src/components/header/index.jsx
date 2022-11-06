@@ -12,7 +12,7 @@ const Header = ({ onMouseEnter, onMouseLeave, bgColor, animate, transition, bgVa
         <HeaderContainer>
             <HeaderLeft variants={bgVariant} animate={animate} transition={transition}>
                 <LogoBlock bgColor={bgColor}>
-                    <Box p="0" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                    <Box p="0" animate onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                         <LOGO animatePath={animatePath} fillOne="#F2F2F2" fillTwo='#F2F2F2' />
                     </Box>
                 </LogoBlock>
@@ -23,13 +23,13 @@ const Header = ({ onMouseEnter, onMouseLeave, bgColor, animate, transition, bgVa
             </HeaderLeft>
             <HeaderRight variants={bgVariant} animate={animate} transition={transition}>
                 <SocialBlock bgColor={bgColor} variants={bgVariant} animate={animate} transition={transition}>
-                    <Box onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                    <Box animate onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                         <Git animatePath={animatePath} />
                     </Box>
-                    <Box onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                    <Box animate onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                         <Insta animatePath={animatePath} />
                     </Box>
-                    <Box onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                    <Box animate onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                         <Linkdin animatePath={animatePath} />
                     </Box>
                 </SocialBlock>

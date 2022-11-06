@@ -26,18 +26,23 @@ const breatheAnimation = keyframes`
   background-position: 0% 50%
   }
 `
+export const MainAnimation = styled(motion.div)`
+height:100%;
+width:100%;
+background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+background-size: 400% 400%;
+animation-name: ${breatheAnimation};
+ animation-duration: 8s;
+ animation-iteration-count: infinite;
+
+`
 
 export const MainLeft = styled(motion.div)`
 width:70%;
 // background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
 
 // background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));
-background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-background-size: 400% 400%;
 border-right: 0.5px solid rgba(30, 36, 53, 1);
-animation-name: ${breatheAnimation};
- animation-duration: 8s;
- animation-iteration-count: infinite;
 ${space}
 ${layout}
 ${color}

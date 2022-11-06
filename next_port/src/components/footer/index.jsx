@@ -50,7 +50,7 @@ const Footer = ({ aboutEnter, aboutLeave, workEnter, WorkLeave, bgColor, bgVaria
                     alignItems="center"
                 >
                     <Box pr="30%">
-                        <Box width="100%" maxWidth="200px" variants={rotateMotion(90)}>
+                        <Box animate={false} width="100%" maxWidth="200px" variants={rotateMotion(90)}>
                             <Cross animatePath={animatePath} variants={pathVariants} transition={transition} fill="#f2f2f2" />
                         </Box>
                     </Box>
