@@ -3,7 +3,7 @@ import Hand from "../svgComponent/Hand";
 import Paragraph from "../../common/Paragraph/Paragraph";
 import Box from "../../common/Box/Box";
 import { MainContainer, MainLeft, MainRight } from "./styles";
-import { rotateScrollMotion, scrollMotion } from "../motion";
+import { rotateScrollMotion, scrollMotion, brightUpMotion } from "../motion";
 import MainAni from './MainAni'
 
 const Main = ({ onMouseEnter, onMouseLeave, bgColor, animate, transition, bgVariant, textAnimate, textVariants, animatePath }) => {

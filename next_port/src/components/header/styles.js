@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 export const HeaderContainer = styled(motion.div)`
 display:flex;
 height:12%;
+background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
 ${space}
 ${layout}
 ${color}
