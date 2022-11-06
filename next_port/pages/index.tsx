@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
 import Loader from '../src/components/loader/Loader'
-import Container from '../src/components/container/Container'
+import Container from '../src/components/Container/Container'
 export default function Home() {
 
   
