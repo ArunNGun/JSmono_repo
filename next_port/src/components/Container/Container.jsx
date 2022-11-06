@@ -66,6 +66,7 @@ const Container = () => {
     }
 
 
+
     ////
 
     const mouseVariants = {
@@ -86,9 +87,11 @@ const Container = () => {
         },
         about: {
             opacity: 1,
-            backgroundColor: "rgba(151, 126, 242, .15)",
-            filter: "blur(1px)",
+            // backgroundColor: "rgba(151, 126, 242, .15)",
+            backgroundColor: "rgba(151, 126, 242, 0.2)",
+            // filter: "blur(1px)",
             color: "White",
+            color: "rgba(151, 126, 242, 5)",
             border: "1px solid rgba(151, 126, 242, 5)",
             height: 100,
             width: 100,
@@ -116,7 +119,6 @@ const Container = () => {
         header: {
             opacity: 1,
             backgroundColor: "rgba(255, 255, 255, 1)",
-            // color: "#f2f2f2",
             // filter: "invert(1)",
             // mixBlendMode: "difference",
             // backgroundColor: "yellow",
@@ -132,9 +134,10 @@ const Container = () => {
         },
         contact: {
             opacity: 1,
-            backgroundColor: "rgba(151, 126, 242, .15)",
-            filter: "blur(1px)",
-            color: "White",
+            // backgroundColor: "rgba(151, 126, 242, .15)",
+            backgroundColor: "rgba(151, 126, 242, 0.2)",
+            // filter: "blur(1px)",
+            color: "rgba(151, 126, 242, 5)",
             border: "1px solid rgba(151, 126, 242, 5)",
             height: 100,
             width: 100,
@@ -154,6 +157,30 @@ const Container = () => {
         },
         secondary: {
             backgroundColor: "#bcc3d1"
+        },
+        hidden: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                ease: [0.6, 0.01, -0.05, 0.95],
+                duration: 3
+            }
+        },
+        show: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                ease: [0.6, 0.01, -0.05, 0.95],
+                duration: 3
+            }
+        },
+        exit: {
+            opacity: 0,
+            scale: 0,
+            transition: {
+                ease: "easeInOut",
+                duration: 3
+            }
         }
     }
     const textVariants = {

@@ -62,3 +62,4 @@ export const rotateScrollMotion = (zaxis = 45, yaxis = -35) => {
         }
     }
 };
+

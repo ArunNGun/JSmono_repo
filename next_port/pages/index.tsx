@@ -13,13 +13,12 @@ const [loading,setLoading] = useState (true)
 
   return (
     <AnimateSharedLayout type="crossfade">
-
     <AnimatePresence>
-      
       {loading ?
       <motion.div key="loader">
         <Loader setLoading={setLoading} />
       </motion.div>:
+      // temp calling container
       <Container />
     }
     </AnimatePresence>

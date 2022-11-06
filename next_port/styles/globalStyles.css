@@ -47,6 +47,9 @@ q:before,q:after {
 }
 abbr,acronym { border:0;
 }
+a{
+    text-decoration: none;
+}
 .bablu{
     position: absolute;
     top:0;

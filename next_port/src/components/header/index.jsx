@@ -6,6 +6,7 @@ import Insta from '../svgComponent/Insta'
 import Linkdin from '../svgComponent/Linkdin'
 import { ContactBlock, LogoBlock, HeaderContainer, NavLinksBlock, SocialBlock, HeaderLeft, HeaderRight } from './styles'
 import Box from '../../common/Box/Box'
+import Link from 'next/link'
 
 const Header = ({ onMouseEnter, onMouseLeave, bgColor, animate, transition, bgVariant, textVariants, textAnimate, animatePath }) => {
     return (
@@ -13,11 +14,16 @@ const Header = ({ onMouseEnter, onMouseLeave, bgColor, animate, transition, bgVa
             <HeaderLeft variants={bgVariant} animate={animate} transition={transition}>
                 <LogoBlock bgColor={bgColor}>
                     <Box p="0" animate onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-                        <LOGO animatePath={animatePath} fillOne="#F2F2F2" fillTwo='#F2F2F2' />
+                        <Link href="/">
+                            <LOGO animatePath={animatePath} fillOne="#F2F2F2" fillTwo='#F2F2F2' />
+                        </Link>
                     </Box>
                 </LogoBlock>
                 <NavLinksBlock bgColor={bgColor}>
-                    <Text animate={textAnimate} variants={textVariants} transition={transition} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>ABOUT</Text>
+                    <Link href="/about">
+                        <Text animate={textAnimate} variants={textVariants} transition={transition} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>ABOUT</Text>
+                    </Link>
+
                     <Text animate={textAnimate} variants={textVariants} transition={transition} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>WORK</Text>
                 </NavLinksBlock>
             </HeaderLeft>
@@ -34,6 +40,7 @@ const Header = ({ onMouseEnter, onMouseLeave, bgColor, animate, transition, bgVa
                     </Box>
                 </SocialBlock>
                 <ContactBlock bgColor={bgColor} variants={bgVariant} animate={animate} transition={transition}>
+
                     <Text onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} animate={textAnimate} variants={textVariants} transition={transition}>
                         GET IN TOUCH
                     </Text>
