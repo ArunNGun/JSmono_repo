@@ -19,7 +19,6 @@ const useCursor = () => {
     let mouseYPosition = mouse.clientY;
 
     if (mouse.x !== null) {
-        console.log(mouse.clientX)
         mouseXPosition = mouse.clientX;
     }
 
@@ -38,6 +37,7 @@ const useCursor = () => {
             mixBlendMode: "difference",
             x: mouseXPosition,
             y: mouseYPosition,
+            zIndex: 99,
             transition: {
                 type: "spring",
                 mass: 0.6
@@ -56,6 +56,7 @@ const useCursor = () => {
             fontSize: "12px",
             display: "flex",
             alignItems: "center",
+            zIndex: 99,
             justifyContent: "center",
             x: mouseXPosition - 50,
             y: mouseYPosition - 50
@@ -65,6 +66,7 @@ const useCursor = () => {
             backgroundColor: "rgba(151, 126, 242, 0.2)",
             color: "#000",
             height: 100,
+            zIndex: 99,
             width: 100,
             border: "1px solid rgba(151, 126, 242, 5)",
             fontSize: "18px",
@@ -83,6 +85,7 @@ const useCursor = () => {
             mixBlendMode: "difference",
             height: 60,
             width: 60,
+            zIndex: 99,
             fontSize: "18px",
             display: "flex",
             alignItems: "center",
@@ -99,6 +102,7 @@ const useCursor = () => {
             border: "1px solid rgba(151, 126, 242, 5)",
             height: 100,
             width: 100,
+            zIndex: 99,
             fontSize: "12px",
             display: "flex",
             alignItems: "center",

@@ -41,10 +41,11 @@ const Header = ({ onMouseEnter, onMouseLeave, bgColor, animate, transition, bgVa
                     </Box>
                 </SocialBlock>
                 <ContactBlock bgColor={bgColor} variants={bgVariant} animate={animate} transition={transition}>
-
-                    <Text onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} animate={textAnimate} variants={textVariants} transition={transition}>
-                        GET IN TOUCH
-                    </Text>
+                    <Link href='/contact'>
+                        <Text onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} animate={textAnimate} variants={textVariants} transition={transition}>
+                            GET IN TOUCH
+                        </Text>
+                    </Link>
                 </ContactBlock>
             </HeaderRight>
         </HeaderContainer>

@@ -13,7 +13,7 @@ ${layout}
 ${color}
 `
 export const FooterLeft = styled(motion.div)`
-width:70%;
+width:65%;
 // background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
 border-right: 0.5px solid rgba(30, 36, 53, 1);
 display:flex;
@@ -23,7 +23,7 @@ ${layout}
 ${color}
 `
 export const FooterRight = styled(motion.div)`
-width:30%;
+width:35%;
 // background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
 ${space}
 ${layout}
