@@ -12,7 +12,7 @@ ${color}
 `
 export const HeaderLeft = styled(motion.div)`
 display:flex;
-width:70%;
+width:65%;
 height:100%;
 // background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
 
@@ -22,7 +22,7 @@ ${layout}
 ${color}
 `
 export const HeaderRight = styled(motion.div)`
-width:30%;
+width:35%;
 // background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
 
 display:flex;

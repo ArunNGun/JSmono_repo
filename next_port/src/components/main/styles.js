@@ -34,11 +34,20 @@ background-size: 400% 400%;
 animation-name: ${breatheAnimation};
  animation-duration: 8s;
  animation-iteration-count: infinite;
-
+ align-items:${({ alignItems }) => alignItems};
+justify-content:${({ justifyContent }) => justifyContent};  
+flex-direction:${({ flexDirection = "row" }) => flexDirection};
+gap:${({ gap = "" }) => gap};
+overflow:${({ overflow = "" }) => overflow};
+overflow-y:${({ overflowY = "" }) => overflowY};
+overflow-x:${({ overflowX = "" }) => overflowX};
+ ${space}
+ ${layout}
+ ${color}
 `
 
 export const MainLeft = styled(motion.div)`
-width:70%;
+width:65%;
 // background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
 
 // background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));
@@ -49,7 +58,7 @@ ${color}
 `
 
 export const MainRight = styled(motion.div)`
-width:30%;
+width:35%;
 // background:${({ bgColor = "linear-gradient(0deg, #050A18, #050A18);" }) => bgColor};
 color: inherit;
 display:flex;
