@@ -20,6 +20,8 @@ width:65%;
 
 // background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));
 border-right: 0.5px solid rgba(30, 36, 53, 1);
+position:relative;
+overflow:hidden;
 ${space}
 ${layout}
 ${color}

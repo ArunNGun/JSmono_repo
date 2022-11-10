@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Box from '../../common/Box/Box';
 import { HugeText } from '../../common/Text/Text';
+import Email from './Email';
 import { ContactMainContainer, Circle, ContactMainFormRight, ContactMainLeft, ContactMainRight, Circle1, Circle2, Circle3, Circle4 } from './styles';
 
 
@@ -21,10 +22,34 @@ const ContactMain = () => {
         show: { top: 0, transition: { ease: "linear", duration: 19, repeat: Infinity, repeatType: "reverse" } }
     };
 
+    ////////\
+    const variantsShow = {
+        initial: {
+            opacity: 0
+        },
+        hover: {
+            opacity: 1,
+            transition: { duration: 2, type: "tween" }
+        }
+    }
+    const variantsHide = {
+        initial: {
+            opacity: 1
+
+        },
+        hover: {
+            opacity: 0,
+            transition: { duration: 2, type: "tween" }
+
+        }
+    }
+
     return (
         <ContactMainContainer>
-            <ContactMainLeft>
-                arun@gmail.com
+            <ContactMainLeft initial="initial" animate="animate" whileHover="hover">
+                <HugeText>GET IN TOUCH</HugeText>
+
+                <Email variantsShow={variantsShow} variantsHide={variantsHide} />
             </ContactMainLeft>
             <ContactMainRight hidden="hidden" animate="show">
                 <Circle1 variants={circleVariantsL} top="0" right="0" id="circle1" height="6rem" width="6rem"></Circle1>
